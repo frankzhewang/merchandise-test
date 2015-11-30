@@ -3,13 +3,13 @@ Numerics in the paper "Optimal Merchandise Testing with Limited Inventory"
 
 ## Setup UNC KillDevil
 
-### Connect to UNC KillDevil
+- Connect to UNC KillDevil
 ```bash
 ssh youronyen@killdevil.unc.edu
 ```
 Use your Onyen password to log in.
 
-### Load Matlab and Mathematica every time you log in.
+- Load Matlab and Mathematica every time you log in.
 ```bash
 module initadd matlab
 module initadd mathematica 
