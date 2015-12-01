@@ -21,7 +21,7 @@ T = 1; % length in time of each period
 Gm = [2*gm gm+1 2]./sum([2*gm gm+1 2]); % normalized relative demand coeffcients
 nStore = length(Gm);
 qMax = 30; % inventory limit Q
-nTrial = 1e1; % number of trials
+nTrial = 1e6; % number of trials
 
 %% generate demand
 
