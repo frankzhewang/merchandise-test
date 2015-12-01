@@ -3,9 +3,9 @@
 
 if [ $# -eq 0 ]
 then
-    file='params-demand.txt'
+    file="../data/params-demand.txt"
 else
-    file=$1
+    file="../data/${1}"
 fi
 
 if [ -f $file ]
