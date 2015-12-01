@@ -21,7 +21,7 @@ T = 1; % length in time of each period
 Gm = [2*gm gm+1 2]./sum([2*gm gm+1 2]); % normalized relative demand coeffcients
 nStore = length(Gm);
 qMax = 30; % inventory limit Q
-nTrial = 1e6; % number of trials
+nTrial = 1e1; % number of trials
 
 %% generate demand
 
@@ -36,8 +36,6 @@ clear Tau; % release memory
 D1 = reshape(sum(CumTau <= T, 2), nTrial, nStore); % period 1 demand
 D2 = reshape(poissrnd(Lm), nTrial, nStore); % period 2 demand
 
-% save([outPath '/demand-seed-abGm' id '.mat'] ...
-    ,'a','b','T','Gm','rs');
 save([outPath '/demand-abGm' id '.mat'] ...
-    ,'a','b','T','Gm' ...
-    ,'rs','Lm','CumTau','D1','D2');
+     ,'a','b','T','Gm' ...
+     ,'rs','Lm','CumTau','D1','D2');
