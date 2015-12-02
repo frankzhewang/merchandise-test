@@ -1,0 +1,18 @@
+#!/bin/sh
+# submit jobs for computing two-store timing profit
+
+if [ $# -eq 0 ]; then
+  echo "Please specify path for demand data."
+  exit 1
+fi
+
+mkdir -p ../log/timing
+
+cd ../src-matlab
+
+while read id a m gm; do
+  bsub -M8 -q day -g /timing -J "timing${id}" \
+    matlab -nojvm -nodisplay -nosplash -singleCompThread \
+    -r "timing('${id}',$a,$m,$gm,'${1}')" \
+    -logfile "../log/timing/${id}.log"
+done < ../data/params-demand.txt
