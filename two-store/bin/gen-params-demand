@@ -1,6 +1,8 @@
 #!/bin/sh
 # generate parameter file for simulating demand paths
 
+mkdir -p ../data
+
 if [ $# -eq 0 ]
 then
     file="../data/params-demand.txt"
