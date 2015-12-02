@@ -1,4 +1,4 @@
-function job_gen_demand(id, a, meanLm, gm, outPath)
+function gen_demand(id, a, meanLm, gm, outPath)
 % JOB_GEN_DEMAND Monte Carlo simulation of demand paths for a
 % three-heterogeneous-store merchandise testing problem.
 % 
@@ -6,7 +6,7 @@ function job_gen_demand(id, a, meanLm, gm, outPath)
 %
 % Uses naive sampling method.
 %
-% Usage: JOB_GEN_DEMAND(id, a, meanLm, gm)
+% Usage: JOB_GEN_DEMAND(id, a, meanLm, gm, outPath)
 %   id:     string. instance id as specified in parameter files.
 %   a:      scalar. alpha, scale parameter of gamma prior.
 %   meanLm: scalar. lambda, ex ante mean arrival rate.
@@ -25,7 +25,7 @@ nTrial = 1e6; % number of trials
 
 %% generate demand
 
-pid = feature('getpid');
+pid = feature('getpid'); % use system pid as random seed
 rs = rng(pid,'twister');
 
 Lm = kron(Gm', gamrnd(a, 1/b, nTrial, 1)); % gm * lambda
@@ -36,6 +36,6 @@ clear Tau; % release memory
 D1 = reshape(sum(CumTau <= T, 2), nTrial, nStore); % period 1 demand
 D2 = reshape(poissrnd(Lm), nTrial, nStore); % period 2 demand
 
-save([outPath '/demand-abGm' id '.mat'] ...
+save([outPath '/demand-N3-abGm' id '.mat'] ...
      ,'a','b','T','Gm' ...
      ,'rs','Lm','CumTau','D1','D2');
