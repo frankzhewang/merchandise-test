@@ -11,7 +11,7 @@ cd ../src-matlab
 
 while read id a m gm; do
   bsub -M8 -q hour -g /gendemand -J "demand${id}" \
-    matlab -nodisplay -nosplash -singleCompThread \
+    matlab -nojvm -nodisplay -nosplash -singleCompThread \
     -r "gen_demand('${id}',$a,$m,$gm,'${1}')" \
     -logfile "../log/demand/${id}.log"
 done < ../data/params-demand.txt
