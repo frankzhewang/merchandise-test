@@ -21,8 +21,8 @@ If[!DirectoryQ[dir],CreateDirectory[dir]];
 
 qMax = 30; (* total test inventory *)
 p = 20; (* unit selling price *)
-lstC = Table[c, {c, 1, 10}]; (* unit procurement costs *)
-lstNVRatio = (p-#)/p& /@ lstC; (* newsvendor ratios *)
+lstC = Table[c, {c, 10, 1, -1}]; (* unit procurement costs *)
+lstNVRatio = (p-#)/p& /@ lstC; (* ASCENDING newsvendor ratios *)
 nNVRatio = Length[lstNVRatio];
 t = 1; (* length of the testing period *)
 nStore = Length[lstGm];
