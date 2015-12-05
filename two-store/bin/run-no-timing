@@ -1,0 +1,16 @@
+#!/bin/bash
+# submit jobs for computing two-store no-timing profit
+
+if [ $# -eq 0 ]; then
+  echo "Please specify path for demand data."
+  exit 1
+fi
+
+mkdir -p ../log/no-timing
+
+while read id c; do
+  bsub -q hour -g /no-timing -J "nt${id}-c${c}" \
+    matlab -nojvm -nodisplay -nosplash -singleCompThread \
+    -r "no_timing('${id}',$c,'${1}')" \
+    -logfile "../log/no-timing/${id}-c${c}.log"
+done < ../data/params-no-timing.txt
