@@ -1,11 +1,11 @@
-function no_timing(demandPath, id, c)
+function no_timing(id, c, demandPath)
 % NO_TIMING Compute ex ante expected profit under all possible allocations
 %           for a two-store merchandise testing problem.
 %
-% Input:
-% demandPath: string. path where demand data files lie.
-% id:         string. demand data file id.
-% c:          scalar. unit procurement cost.
+% Usage: NO_TIMING(id, c, demandPath)
+%   id:         string. demand data file id.
+%   c:          scalar. unit procurement cost.
+%   demandPath: string. path where demand data files lie.
 
 %% parameter setting
 % TODO: make these adjustable
@@ -52,7 +52,7 @@ end
 
 %% without timing information
 % load solution table
-S = load(['../sol-tab-combine/' id '/sol-tab-abGm' id ...
+S = load(['../out/sol-tab-combine/' id '/sol-tab-abGm' id ...
     '-c' sprintf('%d',c) '.mat'],'TabSol');
 TabSol = S.TabSol;
 clear S
