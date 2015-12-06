@@ -1,4 +1,7 @@
-% frequency scatter plot
+% Figure 3
+% Comparison of the optimal test inventory allocation policies for the
+% cases with and without timing information (N=2)
+
 STiming = load('../../two-store/out/timing/timing-summary.mat','OptAlloc');
 SNoTiming = load('../../two-store/out/no-timing/no-timing-summary.mat','OptAlloc');
 
