@@ -32,7 +32,7 @@ end
 %% summarize data
 ins = 0;
 for id = 1:120
-    S = load(['../../two-store/out/timing/timing-abGm' sprintf('%03d',id) '.mat']...
+    S = load(['../out/timing/timing-abGm' sprintf('%03d',id) '.mat']...
         ,'a','b','Gm','MeanProfitTiming');
 
     MeanProfit = S.MeanProfitTiming;
@@ -66,6 +66,6 @@ for id = 1:120
     disp(ins);
 end
 
-save('timing-summary.mat'...
+save('../out/timing/timing-summary.mat'...
      ,'OptAlloc','MSAlloc' ...
      ,'OptProfit','MSProfit','OneProfit','TwoProfit');
