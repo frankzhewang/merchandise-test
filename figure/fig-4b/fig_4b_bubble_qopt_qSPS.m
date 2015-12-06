@@ -2,7 +2,7 @@
 % Comparison of the heuristics and the optimal allocation policies (N=2)
 % Timing information unobservable
 
-S = load('../../out/no-timing/no-timing-summary.mat','OptAlloc','LDFSearchAlloc');
+S = load('../../two-store/out/no-timing/no-timing-summary.mat','OptAlloc','LDFSearchAlloc');
 X = S.OptAlloc(:,1);
 Y = S.LDFSearchAlloc(:,1);
 
