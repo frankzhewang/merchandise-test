@@ -8,6 +8,8 @@ fi
 
 mkdir -p ../log/no-timing
 
+cd ../src-matlab
+
 while read id c; do
   bsub -q hour -g /no-timing -J "nt${id}-c${c}" \
     matlab -nojvm -nodisplay -nosplash -singleCompThread \
