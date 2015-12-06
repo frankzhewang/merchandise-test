@@ -1,6 +1,6 @@
 % frequency scatter plot
 STiming = load('../../two-store/out/timing/timing-summary.mat','OptAlloc');
-SNoTiming = load('../../two-store/out/no-timing/notiming-summary.mat','OptAlloc');
+SNoTiming = load('../../two-store/out/no-timing/no-timing-summary.mat','OptAlloc');
 
 X = STiming.OptAlloc(:,1);
 Y = SNoTiming.OptAlloc(:,1);
