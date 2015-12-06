@@ -2,7 +2,7 @@
 % Comparison of the heuristic and the optimal allocation policies (N=2)
 % Timing information observable
 
-S = load('timing-summary.mat','OptAlloc','MSAlloc');
+S = load('../../two-store/out/timing/timing-summary.mat','OptAlloc','MSAlloc');
 X = S.OptAlloc(:,1);
 Y = S.MSAlloc(:,1);
 
