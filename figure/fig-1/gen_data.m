@@ -1,4 +1,5 @@
-clear;
+% Matlab script
+% Generate data for Figure 1.
 
 %% parameter setting
 a = 2; % scale parameter of gamma prior 
