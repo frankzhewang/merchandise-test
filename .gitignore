@@ -4,3 +4,6 @@
 
 # exclude temp files
 *.m~
+
+# exclude demand data files
+demand*.mat
