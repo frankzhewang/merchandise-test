@@ -80,7 +80,7 @@ for id = 1:120
         OptAlloc(ins,:) = Ind2Alloc(iOptAlloc,:);
         
         % use ascending allocation for identical-store cases
-        if Gm(ins,1)==1/nStore % TODO: avoid use of == for float comparison
+        if Gm(1)==1/nStore % TODO: avoid use of == for float comparison
             OptAlloc(ins,:) = sort(OptAlloc(ins,:));
         end
         
