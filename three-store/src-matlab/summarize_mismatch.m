@@ -27,10 +27,11 @@ S = load('../out/no-timing/no-timing-summary.mat','OptAlloc');
 NoTimingOptAlloc = S.OptAlloc;
 clear S
 
+fprintf('Summarizing profits with timing info. under optimal no-timing allocation ...\n');
 NoTimingOptProfit = zeros(nInstance, 1);
 ins = 0;
 for id = 1:120
-    S = load(['..out/timing/timing-abGm' sprintf('%03d',id) '.mat']...
+    S = load(['../out/timing/timing-abGm' sprintf('%03d',id) '.mat']...
              ,'MeanProfitTiming');
 
     MeanProfit = S.MeanProfitTiming;
@@ -40,6 +41,7 @@ for id = 1:120
         ins = ins + 1;
         
         NoTimingOptProfit(ins) = MeanProfit(Alloc2Ind(bi2de(NoTimingOptAlloc(ins,:),qMax+1,'left-msb')+1),ic);
+        fprintf('Instance %d completed.\n', ins);
     end
 end
 
@@ -49,6 +51,7 @@ S = load('../out/timing/timing-summary.mat','OptAlloc');
 TimingOptAlloc = S.OptAlloc;
 clear S
 
+fprintf('Summarizing profits without timing info. under optimal timing allocation ...\n');
 TimingOptProfit = zeros(nInstance, 1);
 ins = 0;
 for id = 1:120
@@ -62,6 +65,7 @@ for id = 1:120
         ins = ins + 1;
         
         TimingOptProfit(ins) = MeanProfit(Alloc2Ind(bi2de(TimingOptAlloc(ins,:),qMax+1,'left-msb')+1));
+        fprintf('Instance %d completed.\n', ins);
     end
 end
 
