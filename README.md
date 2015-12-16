@@ -17,13 +17,15 @@ module initadd mathematica
 ```
 Please refer to http://help.unc.edu/help/getting-started-on-killdevil/ for detailed instructions.
 
-- Clone this repo <a name='clone'></a>
+<a name='clone'></a>
+- Clone this repo 
 ```bash
 git clone https://github.com/frankzhewang/merchandise-test.git
 ```
 The above command can also be used to setup on a personal computer.
 
-## Switch between versions <a name='switch'></a>
+<a name='switch'></a>
+## Switch between versions
 This repo contains different versions of the numerical analysis
 
 Currently, there are two versions: `master`, and `testing`. The `master` version 
