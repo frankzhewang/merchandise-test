@@ -28,9 +28,9 @@ The above command can also be used to setup on a personal computer.
 ## Switch between versions
 This repo contains different versions of the numerical analysis
 
-Currently, there are two versions: `master`, and `testing`. The `master` version 
+Currently, there are two versions: `master`, and `testing`. The [`master`](https://github.com/frankzhewang/merchandise-test/tree/master) version, a clean version in which output data are not included , is the default version when the repo is cloned. The [`testing`](https://github.com/frankzhewang/merchandise-test/tree/testing) version also includes output data from a complete testing run of all the numerical analysis.  
 
-You can use the following Git command under the root directory to switch between versions:
+Under the root directory, you can use the following Git command to switch between versions:
 ```bash
 git checkout <version name>
 ```
