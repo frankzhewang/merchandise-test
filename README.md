@@ -23,7 +23,6 @@ Numerics in the paper "Optimal Merchandise Testing with Limited Inventory", co-a
     ```
     The above command can also be used to setup on a personal computer.
 
-<a name='switch'></a>
 ## Switch between versions
 This repo contains different versions of the numerical analysis.
 
@@ -113,7 +112,7 @@ git checkout <version name>
 
 ## Generate Figures
 
-All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Next, make sure that you have the required data ready for each figure that you want to plot. The easiest way to assure this is to [switch](#switch) to the `testing` version which contains results from a testing run of all the numerical analysis.
+All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Next, make sure that you have the required data ready for each figure that you want to plot. The easiest way to assure this is to [switch](#switch-between-versions) to the `testing` version which contains results from a testing run of all the numerical analysis.
 
 ### Figure 1
 
