@@ -28,7 +28,7 @@ t = 1; (* length of the testing period *)
 nStore = Length[lstGm];
 
 (* Enumerate all possible sales observations under qMax *)
-nSalesIndex = (qMax^2)/2 + qMax*3/2 + 1; (* 2 stores *)
+nSalesIndex = (qMax^3)/6 + qMax^2 + qMax*11/6 + 1; (* 3 stores *)
 lstSalesIndex = Array[0 &, nSalesIndex];
 mxSalesObs = Array[0 &, {nSalesIndex, nStore}];
 cntSalesObs = 0;
@@ -48,7 +48,7 @@ Print["Total number of possible observations is " <> ToString[nSalesIndex]];
 nStockoutIndex = 2^nStore;
 
 (* Initialize the solution tables. For each alpha,beta,t,lstGm, there \
-should be a 2x10 solution tables.*)
+should be a 3x10 solution tables.*)
 
 lstTabSolution = 
   Array[0 &, {nNVRatio, nStore, nSalesIndex, nStockoutIndex}];
