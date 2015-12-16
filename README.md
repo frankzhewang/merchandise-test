@@ -1,5 +1,5 @@
 # merchandise-test
-Numerics in the paper "Optimal Merchandise Testing with Limited Inventory"
+Numerics in the paper "Optimal Merchandise Testing with Limited Inventory", co-authored by Zhe (Frank) Wang, Adam J. Mersereau, and Li Chen.
 
 ## Setup UNC KillDevil
 
@@ -25,9 +25,11 @@ Numerics in the paper "Optimal Merchandise Testing with Limited Inventory"
 
 <a name='switch'></a>
 ## Switch between versions
-This repo contains different versions of the numerical analysis
+This repo contains different versions of the numerical analysis.
 
-Currently, there are two versions: `master`, and `testing`. The [`master`](https://github.com/frankzhewang/merchandise-test/tree/master) version, a clean version in which output data are not included , is the default version when the repo is cloned. The [`testing`](https://github.com/frankzhewang/merchandise-test/tree/testing) version also includes output data from a complete testing run of all the numerical analysis.  
+Currently, there are two versions: `master`, and `testing`. The [`master`](https://github.com/frankzhewang/merchandise-test/tree/master) version, a clean version in which output data are not included , is the default version when the repo is cloned. The [`testing`](https://github.com/frankzhewang/merchandise-test/tree/testing) version also includes output data from a complete testing run of all the numerical analysis.
+
+A `paper-v1` version which includes results in the original paper will be added in the near future.
 
 Under the root directory, you can use the following Git command to switch between versions:
 ```bash
@@ -43,7 +45,7 @@ git checkout <version name>
     cd two-store/bin
     ./run-gen-demand <output path>
     ```
-    Note that due to the sizes of demand files, the output path should be on the lustre scratch space of KillDevil. Your personal   `/lustre` directory should look like `/lustre/scr/y/o/youronyen`. For details, see   [here](http://help.unc.edu/help/getting-started-on-killdevil/#P63_6342).
+    Due to the sizes of demand files, the `<output path>` should be on the lustre scratch space of KillDevil. Your personal   `/lustre` directory should look like `/lustre/scr/y/o/youronyen`. For details, see   [here](http://help.unc.edu/help/getting-started-on-killdevil/#P63_6342).
 
     You should always make sure that the submitted jobs have been completed before you proceed to the next step. To check job status, use `bjobs` command.
 
@@ -100,7 +102,7 @@ git checkout <version name>
 
 ## Generate Figures
 
-All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Next, make sure that you have the required data ready for each figure that you want to plot. The easiest way to assure this is to [switch](#switch) to the `testing` version which contains result data from a testing run of all the numerical analysis.
+All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Next, make sure that you have the required data ready for each figure that you want to plot. The easiest way to assure this is to [switch](#switch) to the `testing` version which contains results from a testing run of all the numerical analysis.
 
 ### Figure 1
 
