@@ -101,6 +101,7 @@ git checkout <version name>
     ```bash
     ./run-no-timing <demand file path>
     ```
+    
 6. Summarize profits under various allocation policies
     ```bash
     ./run-summarize
@@ -118,6 +119,7 @@ git checkout <version name>
     ```bash
     ./run-profit <demand file path>
     ```
+
 
 ## Generate Figures
 
