@@ -129,7 +129,7 @@ for id = 1:120
         Two13Profit(ins) = MeanProfit(Alloc2Ind(bi2de([15 0 15],qMax+1,'left-msb')+1));
         ThreeProfit(ins) = MeanProfit(Alloc2Ind(bi2de([10 10 10],qMax+1,'left-msb')+1));
         
-        printf('Instance %d completed.\n', ins); % TODO: clean debug code
+        fprintf('Instance %d completed.\n', ins); % TODO: clean debug code
     end
 end
 
