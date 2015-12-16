@@ -4,7 +4,7 @@
 
 %% initialize
 nInstance = 1200;
-nStore = 2;
+nStore = 3;
 qMax = 30; % inventory limit Q
 
 C = 10:-1:1; % unit procurement cost c
