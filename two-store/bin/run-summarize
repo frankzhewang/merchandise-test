@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mkdir -p ../log
+
+cd ../src-matlab
+
+bsub -q hour -J "summarize" \
+	matlab -nojvm -nodisplay -nosplash -singleCompThread \
+    -r summarize -logfile "../log/summarize.log"
