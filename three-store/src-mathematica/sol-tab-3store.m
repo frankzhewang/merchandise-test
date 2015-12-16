@@ -38,8 +38,8 @@ Do[
 			cntSalesObs += 1;
     		lstSalesIndex[[cntSalesObs]] = FromDigits[{s1, s2, s3}, qMax + 1];
     		mxSalesObs[[cntSalesObs]] = {s1, s2, s3};
-    		, {s3, 0, qMax - s1 - s2}]
-	, {s2, 0, qMax - s1}]
+    		, {s3, 0, qMax - s1 - s2}];
+	, {s2, 0, qMax - s1}];
 , {s1, 0, qMax}];
 
 Assert[nSalesIndex == cntSalesObs];
@@ -57,7 +57,7 @@ lstTabSolution =
 (sales,stockout) observation pair *)
 
 Do[ lstSales = mxSalesObs[[iSalesObs]];(* For each sales observation *)
-    Do[ lstStockout = IntegerDigits[iStockout - 1, 2, 2]; 
+    Do[ lstStockout = IntegerDigits[iStockout - 1, 2, nStore]; 
     (* For each stockout observation *)
    
    (* If for some store sales==qMax, then it has to stockout *)
