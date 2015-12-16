@@ -1,0 +1,22 @@
+#!/bin/sh
+# submit jobs for computing profits
+
+if [ $# -eq 0 ]; then
+  echo "Please specify path for demand data."
+  exit 1
+fi
+
+id="N3-Q40"
+p=10
+c=1
+
+mkdir -p ../log/profit
+
+cd ../src-matlab
+
+for Q in {0..40}; do
+  bsub -M16 -q day -g /profit -J "profit-${Q}" \
+    matlab -nojvm -nodisplay -nosplash -singleCompThread \
+    -r "profit('${1}','${id}',$Q,$p,$c)" \
+    -logfile "../log/profit/Q${Q}.log"
+done

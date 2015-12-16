@@ -1,0 +1,21 @@
+#!/bin/sh
+if [ $# -eq 0 ]; then
+  echo "Please specify output path."
+  exit 1
+fi
+
+id="N3-Q40"
+a=2
+b=0.4
+N=3
+maxD=40
+
+mkdir -p $1
+mkdir -p ../log/demand
+
+cd ../src-matlab
+
+bsub -M8 -q hour -J "demand-${id}" \
+  matlab -nojvm -nodisplay -nosplash -singleCompThread \
+  -r "gen_demand($a,$b,$N,$maxD,'${1}','${id}')" \
+  -logfile "../log/demand/${id}.log"
