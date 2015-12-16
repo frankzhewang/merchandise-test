@@ -15,10 +15,9 @@ Numerics in the paper "Optimal Merchandise Testing with Limited Inventory"
     module initadd matlab
     module initadd mathematica 
     ```
-Please refer to http://help.unc.edu/help/getting-started-on-killdevil/ for detailed instructions.
+    Please refer to http://help.unc.edu/help/getting-started-on-killdevil/ for detailed instructions.
 
-<a name='clone'></a>
-- Clone this repo 
+- <a name='clone'></a>Clone this repo 
     ```bash
     git clone https://github.com/frankzhewang/merchandise-test.git
     ```
@@ -31,9 +30,10 @@ This repo contains different versions of the numerical analysis
 Currently, there are two versions: `master`, and `testing`. The [`master`](https://github.com/frankzhewang/merchandise-test/tree/master) version, a clean version in which output data are not included , is the default version when the repo is cloned. The [`testing`](https://github.com/frankzhewang/merchandise-test/tree/testing) version also includes output data from a complete testing run of all the numerical analysis.  
 
 Under the root directory, you can use the following Git command to switch between versions:
-    ```bash
-    git checkout <version name>
-    ```
+```bash
+git checkout <version name>
+```
+
 ## Run numerical analysis
 
 ### [two-store](two-store): Two-store instances
@@ -48,26 +48,53 @@ Under the root directory, you can use the following Git command to switch betwee
     You should always make sure that the submitted jobs have been completed before you proceed to the next step. To check job status, use `bjobs` command.
 
 2. Compute profits with timing information
-    ```
+    ```bash
     ./run-timing <demand file path>
     ```
 
 3. Generate solution tables for the no-timing case
-    ```
+    ```bash
     ./run-sol-tab
     ```
 
 4. Combine the raw solution tables
-```
-./run-combine-sol-tab
-```
+    ```bash
+    ./run-combine-sol-tab
+    ```
 
 5. Compute profits without timing information
-```
-./run-no-timing <demand file path>
-```
+    ```bash
+    ./run-no-timing <demand file path>
+    ```
 
 ### [three-store](three-store): Three-store instances
+
+1. Generate demand sample paths
+    ```bash
+    cd two-store/bin
+    ./run-gen-demand <output path>
+    ```
+    Again, make sure that the output path is in your `/lustre` drive, and that the submitted jobs are completed before moving on.
+
+2. Compute profits with timing information
+    ```bash
+    ./run-timing <demand file path>
+    ```
+
+3. Generate solution tables for the no-timing case
+    ```bash
+    ./run-sol-tab
+    ```
+
+4. Combine the raw solution tables
+    ```bash
+    ./run-combine-sol-tab
+    ```
+
+5. Compute profits without timing information
+    ```bash
+    ./run-no-timing <demand file path>
+    ```
 
 ### [three-store-Q40](three-store-Q40): A three-identical-store example
 
