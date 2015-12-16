@@ -40,7 +40,7 @@ git checkout <version name>
 
 ## Generate Figures
 
-All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Make sure that you have the relevant data ready. The easiest way to achieve this is to [switch](#switch) to the `testing` version which contains a testing run of all the numerical analysis.
+All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Next, make sure that you have the required data ready for each figure that you want to plot. The easiest way to assure this is to [switch](#switch) to the `testing` version which contains result data from a testing run of all the numerical analysis.
 
 ### Figure 1
 
@@ -49,17 +49,25 @@ All the figures are generated in Matlab. To generate figures, first [clone this 
 
 ### Figure 2
 
+- Requires a complete run of analysis in [three-store-Q40](three-store-Q40).
+- Run [figure/fig-2/]().
+
 ### Figure 3
 
+- Requires a complete run of analyis in [two-store](two-store).
 - Run [figure/fig-3/fig\_3\_bubble\_qNT\_qT.m](figure/fig-3/fig_3_bubble_qNT_qT.m).
 
 ### Figure 4
 
-- Run [figure/fig-4a/fig\_4a\_bubble\_qopt\_qMS.m](figure/fig-4a/fig_4a_bubble_qopt_qMS.m) to generate Figure 4a
+- Requires a complete run of analysis in [two-store](two-store).
+- Run [figure/fig-4a/fig\_4a\_bubble\_qopt\_qMS.m](figure/fig-4a/fig_4a_bubble_qopt_qMS.m) to generate Figure 4a.
 - Run [figure/fig-4b/fig\_4b\_bubble\_qopt\_qSPS.m](figure/fig-4b/fig_4b_bubble_qopt_qSPS.m) to generate Figure 4b.
 
 ### Figure 5
 
+- Requires a complete run of analysis in [two-store](two-store).
 - Run [figure/fig-5/fig\_5\_gap\_r\_SP.m](figure/fig-5/fig_5_gap_r_SP.m).
 
 ### Figure 6
+
+- Requires a complete run of analysis in [three-store](three-store).
