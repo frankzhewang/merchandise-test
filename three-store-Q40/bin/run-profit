@@ -15,7 +15,7 @@ mkdir -p ../log/profit
 cd ../src-matlab
 
 for Q in {0..40}; do
-  bsub -M8 -q day -g /profit -J "profit-${Q}" \
+  bsub -M16 -q day -g /profit -J "profit-${Q}" \
     matlab -nojvm -nodisplay -nosplash -singleCompThread \
     -r "profit('${1}','${id}',$Q,$p,$c)" \
     -logfile "../log/profit/Q${Q}.log"
