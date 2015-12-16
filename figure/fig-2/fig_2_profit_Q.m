@@ -11,7 +11,7 @@ MaxMPrftNT = zeros(1,qMax+1);
 MaxMPrftT = zeros(1,qMax+1);
 
 for q = 0:qMax
-    S = load(['../../three-store-Q40/out/profit-N3-' sprintf('%d',q) '.mat']);
+    S = load(['../../three-store-Q40/out/profit-N3-Q' sprintf('%d',q) '.mat']);
     MPrftNT1(q+1) = S.mPrftNT1;
     MPrftNT2(q+1) = S.mPrftNT2;
     MPrftNT3(q+1) = S.mPrftNT3;
