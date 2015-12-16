@@ -1,6 +1,5 @@
 # exclude log files
-/two-store/log/*
-/three-store/log/*
+*.log
 
 # exclude temp files
 *.m~
