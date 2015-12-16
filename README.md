@@ -17,16 +17,16 @@ module initadd mathematica
 ```
 Please refer to http://help.unc.edu/help/getting-started-on-killdevil/ for detailed instructions.
 
-- Clone this repo
+- Clone this repo <a name='clone'></a>
 ```bash
 git clone https://github.com/frankzhewang/merchandise-test.git
 ```
 The above command can also be used to setup on a personal computer.
 
-## Switch between versions
+## Switch between versions <a name='switch'></a>
 This repo contains different versions of the numerical analysis
 
-Currently, there are two versions: `master`, and `testing`. The `master` version
+Currently, there are two versions: `master`, and `testing`. The `master` version 
 
 You can use the following Git command under the root directory to switch between versions:
 ```bash
@@ -38,7 +38,7 @@ git checkout <version name>
 
 ## Generate Figures
 
-Before generating a figures, make sure that you have the relevant data ready.
+All the figures are generated in Matlab. To generate figures, first [clone this repo](#clone) to your personal computer. Make sure that you have the relevant data ready. The easiest way to achieve this is to [switch](#switch) to the `testing` version which contains a testing run of all the numerical analysis.
 
 ### Figure 1
 
