@@ -48,7 +48,7 @@ git checkout <version name>
 
     You should always make sure that the submitted jobs have been completed before you proceed to the next step. To check job status, use `bjobs` command.
 
-2. Compute profits with timing information
+2. Compute profits with timing information under all possible allocations
     ```bash
     ./run-timing <demand file path>
     ```
@@ -63,9 +63,14 @@ git checkout <version name>
     ./run-combine-sol-tab
     ```
 
-5. Compute profits without timing information
+5. Compute profits without timing information under all possible allocations
     ```bash
     ./run-no-timing <demand file path>
+    ```
+    
+6. Summarize profits under various allocation policies
+    ```bash
+    ./run-summarize
     ```
 
 ### <a name='3store'></a>[three-store](three-store): Three-store instances
@@ -77,7 +82,7 @@ git checkout <version name>
     ```
     Again, make sure that the output path is in your `/lustre` drive, and that the submitted jobs are completed before moving on.
 
-2. Compute profits with timing information
+2. Compute profits with timing information under all possible allocations
     ```bash
     ./run-timing <demand file path>
     ```
@@ -92,9 +97,14 @@ git checkout <version name>
     ./run-combine-sol-tab
     ```
 
-5. Compute profits without timing information
+5. Compute profits without timing information under all possible allocations
     ```bash
     ./run-no-timing <demand file path>
+    ```
+    
+6. Summarize profits under various allocation policies
+    ```bash
+    ./run-summarize
     ```
 
 ### <a name='q40'></a>[three-store-Q40](three-store-Q40): A three-identical-store example
@@ -109,6 +119,7 @@ git checkout <version name>
     ```bash
     ./run-profit <demand file path>
     ```
+
 
 ## Generate Figures
 
@@ -143,3 +154,5 @@ All the figures are generated in Matlab. To generate figures, first [clone this 
 ### Figure 6
 
 - Requires a complete run of analysis in [three-store](three-store) (see [here](#3store)).
+- Run [figure/fig-6/fig\_6a\_box\_timing.m](figure/fig-6/fig_6a_box_timing.m) to generate Figure 6a.
+- Run [figure/fig-6/fig\_6b\_box\_no\_timing.m](figure/fig-6/fig_6a_box_no_timing.m) to generate Figure 6b.
