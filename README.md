@@ -42,22 +42,22 @@ Before generating a figures, make sure that you have the relevant data ready.
 
 ### Figure 1
 
-- Run figure/fig-1/gen\_data.m to generate the required data.
-- Run ```figure/fig-1/fig_1_profit_q1.m``` to generate Figure 1.
+- Run [figure/fig-1/gen\_data.m](figure/fig-1/gen_data.m) to generate the required data.
+- Run [figure/fig-1/fig\_1\_profit\_q1.m](figure/fig-1/fig_1_profit_q1.m) to generate Figure 1.
 
 ### Figure 2
 
 ### Figure 3
 
-- Run ```figure/fig-3/fig_3_bubble_qNT_qT.m```.
+- Run [figure/fig-3/fig\_3\_bubble\_qNT\_qT.m](figure/fig-3/fig_3_bubble_qNT_qT.m).
 
 ### Figure 4
 
-- Run ```figure/fig-4a/fig_4a_bubble_qopt_qMS.m``` to generate Figure 4a
-- Run ```figure/fig-4b/fig_4b_bubble_qopt_qSPS.m``` to generate Figure 4b.
+- Run [figure/fig-4a/fig\_4a\_bubble\_qopt\_qMS.m](figure/fig-4a/fig_4a_bubble_qopt_qMS.m) to generate Figure 4a
+- Run [figure/fig-4b/fig\_4b\_bubble\_qopt\_qSPS.m](figure/fig-4b/fig_4b_bubble_qopt_qSPS.m) to generate Figure 4b.
 
 ### Figure 5
 
-- Run ```figure/fig-5/fig_5_gap_r_SP.m```.
+- Run [figure/fig-5/fig\_5\_gap\_r\_SP.m](figure/fig-5/fig_5_gap_r_SP.m).
 
 ### Figure 6
