@@ -69,9 +69,9 @@ git checkout <version name>
     ```
     
 6. Summarize profits under various allocation policies
-        ```bash
-        ./run-summarize
-        ```
+    ```bash
+    ./run-summarize
+    ```
 
 ### <a name='3store'></a>[three-store](three-store): Three-store instances
 
