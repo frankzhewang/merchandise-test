@@ -4,25 +4,25 @@ Numerics in the paper "Optimal Merchandise Testing with Limited Inventory"
 ## Setup UNC KillDevil
 
 - Connect to UNC KillDevil
-```bash
-ssh youronyen@killdevil.unc.edu
-```
-Use your Onyen password to log in.
+    ```bash
+    ssh youronyen@killdevil.unc.edu
+    ```
+    Use your Onyen password to log in.
 
 - Load Git, Matlab and Mathematica every time you log in.
-```bash
-module initadd git
-module initadd matlab
-module initadd mathematica 
-```
+    ```bash
+    module initadd git
+    module initadd matlab
+    module initadd mathematica 
+    ```
 Please refer to http://help.unc.edu/help/getting-started-on-killdevil/ for detailed instructions.
 
 <a name='clone'></a>
 - Clone this repo 
-```bash
-git clone https://github.com/frankzhewang/merchandise-test.git
-```
-The above command can also be used to setup on a personal computer.
+    ```bash
+    git clone https://github.com/frankzhewang/merchandise-test.git
+    ```
+    The above command can also be used to setup on a personal computer.
 
 <a name='switch'></a>
 ## Switch between versions
@@ -31,12 +31,45 @@ This repo contains different versions of the numerical analysis
 Currently, there are two versions: `master`, and `testing`. The [`master`](https://github.com/frankzhewang/merchandise-test/tree/master) version, a clean version in which output data are not included , is the default version when the repo is cloned. The [`testing`](https://github.com/frankzhewang/merchandise-test/tree/testing) version also includes output data from a complete testing run of all the numerical analysis.  
 
 Under the root directory, you can use the following Git command to switch between versions:
-```bash
-git checkout <version name>
-```
+    ```bash
+    git checkout <version name>
+    ```
 ## Run numerical analysis
 
-### Generate demand paths
+### [two-store](two-store): Two-store instances
+
+1. Generate demand sample paths
+    ```bash
+    cd two-store/bin
+    ./run-gen-demand <output path>
+    ```
+    Note that due to the sizes of demand files, the output path should be on the lustre scratch space of KillDevil. Your personal   `/lustre` directory should look like `/lustre/scr/y/o/youronyen`. For details, see   [here](http://help.unc.edu/help/getting-started-on-killdevil/#P63_6342).
+
+    You should always make sure that the submitted jobs have been completed before you proceed to the next step. To check job status, use `bjobs` command.
+
+2. Compute profits with timing information
+    ```
+    ./run-timing <demand file path>
+    ```
+
+3. Generate solution tables for the no-timing case
+    ```
+    ./run-sol-tab
+    ```
+
+4. Combine the raw solution tables
+```
+./run-combine-sol-tab
+```
+
+5. Compute profits without timing information
+```
+./run-no-timing <demand file path>
+```
+
+### [three-store](three-store): Three-store instances
+
+### [three-store-Q40](three-store-Q40): A three-identical-store example
 
 ## Generate Figures
 
