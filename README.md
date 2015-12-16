@@ -42,7 +42,7 @@ Before generating a figures, make sure that you have the relevant data ready.
 
 ### Figure 1
 
-- Run ```figure/fig-1/gen_data.m``` to generate the required data.
+- Run figure/fig-1/gen\_data.m to generate the required data.
 - Run ```figure/fig-1/fig_1_profit_q1.m``` to generate Figure 1.
 
 ### Figure 2
