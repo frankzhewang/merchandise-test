@@ -1,0 +1,24 @@
+#!/bin/bash
+# generate parameter file for computing no-timing profits
+
+mkdir -p ../data
+
+if [ $# -eq 0 ]
+then
+    file="../data/params-no-timing.txt"
+else
+    file="../data/${1}"
+fi
+
+if [ -f $file ]
+then
+    rm $file
+fi
+
+for id in {1..120}; do
+	for p in 20; do
+    	for c in {1..10}; do
+        	printf '%03d %d %d\n' $id $p $c >> $file
+        done
+    done
+done

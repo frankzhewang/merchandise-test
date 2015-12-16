@@ -1,0 +1,15 @@
+#!/bin/bash
+# generate solution tables for the three-store no-timing case
+
+module unload mathematica
+module add mathematica/9.0
+
+mkdir -p ../log/sol-tab
+
+cd ../src-mathematica
+
+while read id a m gm; do
+  bsub -q day -g /sol-tab -J "sol-tab${id}" \
+	-oo "../log/sol-tab/sol-tab${id}.log" \
+	./sol-tab-3store.m $id $a $m $gm
+done < ../data/params-demand.txt
