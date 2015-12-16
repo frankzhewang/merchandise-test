@@ -77,7 +77,7 @@ for id = 1:120
         Two13Profit(ins) = MeanProfit(Alloc2Ind(bi2de([15 0 15],qMax+1,'left-msb')+1),ic);
         ThreeProfit(ins) = MeanProfit(Alloc2Ind(bi2de([10 10 10],qMax+1,'left-msb')+1),ic);
     end
-    fprinft('Instance %d completed.\n', ins);
+    fprintf('Instance %d completed.\n', ins);
 end
 
 save('../out/timing/timing-summary.mat'...
