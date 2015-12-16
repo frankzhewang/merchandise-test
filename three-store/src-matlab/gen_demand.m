@@ -1,12 +1,12 @@
 function gen_demand(id, a, meanLm, gm, outPath)
-% JOB_GEN_DEMAND Monte Carlo simulation of demand paths for a
+% GEN_DEMAND Monte Carlo simulation of demand paths for a
 % three-heterogeneous-store merchandise testing problem.
 % 
 % Demand model is gamma-Poisson.
 %
 % Uses naive sampling method.
 %
-% Usage: JOB_GEN_DEMAND(id, a, meanLm, gm, outPath)
+% Usage: GEN_DEMAND(id, a, meanLm, gm, outPath)
 %   id:     string. instance id as specified in parameter files.
 %   a:      scalar. alpha, scale parameter of gamma prior.
 %   meanLm: scalar. lambda, ex ante mean arrival rate.
