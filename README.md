@@ -1,5 +1,5 @@
 # merchandise-test
-Numerics in the paper "Optimal Merchandise Testing with Limited Inventory", co-authored by Zhe (Frank) Wang, Adam J. Mersereau, and Li Chen.
+Numerics in the paper "Optimal Merchandise Testing with Limited Inventory", co-authored by Li Chen, Adam J. Mersereau, and Zhe (Frank) Wang.
 
 ## Setup UNC KillDevil
 
